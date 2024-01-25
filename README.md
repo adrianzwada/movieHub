@@ -1,4 +1,3 @@
-[x] start <br>
 [x] find api <br>
 [x] visual style <br>
 [ ] template main page ( priotize by movie/tv's ? ) <br>
