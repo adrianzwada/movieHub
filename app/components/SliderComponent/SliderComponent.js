@@ -21,7 +21,7 @@ async function SliderComponent(params) {
 		return (
 			<section>
 				<h2>Error</h2>
-				<p>Failed to load data.</p>
+				<p>Failed to load data. ok</p>
 			</section>
 		)
 	}
