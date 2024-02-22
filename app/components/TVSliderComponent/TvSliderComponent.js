@@ -1,17 +1,18 @@
 import movieDBClient from '../../api/page'
-import MovieCardComponent from '../MovieCardComponent/MovieCardComponent'
-async function MovieSliderComponent() {
+import TvCardComponent from '../TvCardComponent/TvCardComponent'
+async function TvSliderComponent() {
 	try {
-		const movieData = await movieDBClient.fetchPopularMoviesData()
-		if (!movieData) {
+		const tvData = await movieDBClient.fetchPopularTvsData()
+		if (!tvData) {
 			throw new Error('Failed to fetch movie data.')
 		}
+
 		return (
 			<section>
-				<h2>Movies</h2>
+				<h2>Tv</h2>
 				<p>Popular this week</p>
 				<main style={{ display: 'flex' }}>
-					<MovieCardComponent movieData={movieData} />
+					<TvCardComponent tvData={tvData} />
 				</main>
 			</section>
 		)
@@ -25,5 +26,4 @@ async function MovieSliderComponent() {
 		)
 	}
 }
-
-export default MovieSliderComponent
+export default TvSliderComponent

@@ -1,8 +1,10 @@
-import SliderComponent from './components/SliderComponent/SliderComponent'
+import MovieSliderComponent from './components/SliderComponent/SliderComponent'
+import TvSliderComponent from './components/TVSliderComponent/TvSliderComponent'
 function Home() {
 	return (
 		<>
-			<SliderComponent />
+			<MovieSliderComponent />
+			<TvSliderComponent />
 		</>
 	)
 }

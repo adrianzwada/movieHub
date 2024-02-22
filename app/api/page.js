@@ -24,9 +24,14 @@ class TheMovieDBClient {
 			return null
 		}
 	}
-
 	fetchPopularMoviesData() {
-		return this.handleRequest('/movie/popular?language=en-US&page=1')
+		return this.handleRequest('/trending/movie/week?language=en-US')
+	}
+	fetchPopularTvsData() {
+		return this.handleRequest(`/trending/tv/week?language=en-US`)
+	}
+	fetchPopularPeopledata() {
+		return this.handleRequest(`/trending/person/week?language=en-US`)
 	}
 }
 
