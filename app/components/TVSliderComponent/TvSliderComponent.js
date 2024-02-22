@@ -9,8 +9,7 @@ async function TvSliderComponent() {
 
 		return (
 			<section>
-				<h2>Tv</h2>
-				<p>Popular this week</p>
+				<h2>Explore popular TV shows</h2>
 				<main style={{ display: 'flex' }}>
 					<TvCardComponent tvData={tvData} />
 				</main>

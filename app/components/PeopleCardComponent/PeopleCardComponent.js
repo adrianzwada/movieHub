@@ -5,36 +5,33 @@ import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
 import Typography from '@mui/material/Typography'
 import { Button, CardActionArea, CardActions } from '@mui/material'
-const MovieCardComponent = ({ movieData }) => {
+const PeopleCardComponent = ({ peopleData }) => {
 	function ratingAdjust(par, decimalPlaces = 1) {
 		const factor = 10 ** decimalPlaces
 		return Math.floor(par * factor) / factor
 	}
+	console.log(peopleData)
 	return (
 		<>
-			{movieData &&
-				movieData.results.map((movie, index) => (
+			{peopleData &&
+				peopleData.results.map((people, index) => (
 					<div key={index}>
 						{/* <Link to=wyciągnąć dynamicznie id> */}
-						<Card sx={{ maxWidth: 150 }}>
+						<Card sx={{ mr: 10 }}>
 							<CardActionArea>
 								<CardMedia
 									component='img'
 									height='200'
-									image={`https://media.themoviedb.org/t/p/w533_and_h300_bestv2${movie.backdrop_path}`}
-									alt={movie.title}
+									width='200'
+									image={`https://image.tmdb.org/t/p/w533_and_h300_bestv2${people.profile_path}`}
+									alt={people.name}
 								/>
+								<CardContent>
+									<Typography gutterBottom variant='h6' component='div'>
+										<div>{people.name}</div>
+									</Typography>
+								</CardContent>
 							</CardActionArea>
-							<CardActions>
-								<Button size='medium' color='primary'>
-									<FaStar style={{ color: 'yellow' }} />
-									{ratingAdjust(movie.vote_average)}
-								</Button>
-							</CardActions>
-							<div>
-								Release date:
-								<p>{movie.release_date}</p>
-							</div>
 						</Card>
 					</div>
 				))}
@@ -43,4 +40,4 @@ const MovieCardComponent = ({ movieData }) => {
 	)
 }
 
-export default MovieCardComponent
+export default PeopleCardComponent

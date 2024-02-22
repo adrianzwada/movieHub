@@ -8,8 +8,7 @@ async function MovieSliderComponent() {
 		}
 		return (
 			<section>
-				<h2>Movies</h2>
-				<p>Popular this week</p>
+				<h2>Under the Spotlight: What to Watch - The Week's Most Popular Films</h2>
 				<main style={{ display: 'flex' }}>
 					<MovieCardComponent movieData={movieData} />
 				</main>

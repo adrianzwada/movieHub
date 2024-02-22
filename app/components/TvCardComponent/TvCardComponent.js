@@ -11,7 +11,6 @@ const TvCardComponent = ({ tvData }) => {
 		const factor = 10 ** decimalPlaces
 		return Math.floor(par * factor) / factor
 	}
-	console.log(tvData)
 	return (
 		<>
 			{tvData &&
@@ -22,14 +21,13 @@ const TvCardComponent = ({ tvData }) => {
 							<CardActionArea>
 								<CardMedia
 									component='img'
-									height='140'
+									height='200'
 									image={`https://image.tmdb.org/t/p/w533_and_h300_bestv2${tv.backdrop_path}`}
 									alt={tv.name}
 								/>
 								<CardContent>
 									<Typography gutterBottom variant='h6' component='div'>
 										{tv.name}
-										{/* <p>{tv.id}</p> */}
 									</Typography>
 								</CardContent>
 							</CardActionArea>
