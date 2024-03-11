@@ -10,7 +10,6 @@ const PeopleCardComponent = ({ peopleData }) => {
 		const factor = 10 ** decimalPlaces
 		return Math.floor(par * factor) / factor
 	}
-	console.log(peopleData)
 	return (
 		<>
 			{peopleData &&

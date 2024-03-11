@@ -1,4 +1,4 @@
-import movieDBClient from '../../api/page'
+import movieDBClient from '../../apiClients/apiClients'
 import TvCardComponent from '../TvCardComponent/TvCardComponent'
 async function TvSliderComponent() {
 	try {

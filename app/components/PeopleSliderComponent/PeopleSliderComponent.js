@@ -1,4 +1,4 @@
-import movieDBClient from '../../api/page'
+import movieDBClient from '../../apiClients/apiClients'
 import PeopleCardComponent from '../PeopleCardComponent/PeopleCardComponent'
 async function PeopleSliderComponent() {
 	try {

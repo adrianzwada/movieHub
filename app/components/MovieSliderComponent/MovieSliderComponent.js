@@ -1,4 +1,4 @@
-import movieDBClient from '../../api/page'
+import movieDBClient from '../../apiClients/apiClients'
 import MovieCardComponent from '../MovieCardComponent/MovieCardComponent'
 async function MovieSliderComponent() {
 	try {
@@ -6,11 +6,17 @@ async function MovieSliderComponent() {
 		if (!movieData) {
 			throw new Error('Failed to fetch movie data.')
 		}
+		console.log(movieData)
 		return (
 			<section>
 				<h2>Under the Spotlight: What to Watch - The Week's Most Popular Films</h2>
 				<main style={{ display: 'flex' }}>
-					<MovieCardComponent movieData={movieData} />
+					{movieData &&
+						movieData.results.map((movie, index) => (
+							<div key={index}>
+								<MovieCardComponent movieData={movie} />
+							</div>
+						))}
 				</main>
 			</section>
 		)

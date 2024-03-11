@@ -3,7 +3,7 @@ class TheMovieDBClient {
 		this.baseUrl = 'https://api.themoviedb.org/3'
 		this.authToken = process.env.NEXT_PUBLIC_API_TOKEN
 	}
-
+	// adding a languae parameter for language switching
 	async handleRequest(endpoint) {
 		try {
 			const response = await fetch(`${this.baseUrl}${endpoint}`, {
@@ -32,6 +32,9 @@ class TheMovieDBClient {
 	}
 	fetchPopularPeopledata() {
 		return this.handleRequest(`/trending/person/week?language=en-US`)
+	}
+	fetchMovieData(id) {
+		return this.handleRequest(`/movie/${id}/videos?language=en-US`)
 	}
 }
 
